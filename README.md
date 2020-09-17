@@ -18,3 +18,5 @@ yarn start
 
 # Tech
 Project is using [Create React App](https://create-react-app.dev) with [Tailwind.css](https://tailwindcss.com).
+
+Note: All images and content (including fonts) remain copyright and property of their respective owners.
