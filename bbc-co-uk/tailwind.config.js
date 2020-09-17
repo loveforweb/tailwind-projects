@@ -21,6 +21,7 @@ module.exports = {
         food: "url('https://ichef.bbci.co.uk/images/ic/1600xn/p08bm7vf.jpg')",
         sport: "url('https://ichef.bbci.co.uk/images/ic/1600xn/p0824wlf.jpg')",
         tws: "url('https://ichef.bbci.co.uk/images/ic/1600xn/p086rj9w.jpg')",
+        iplayer: "url('https://ichef.bbci.co.uk/images/ic/raw/p07sxd39.png')",
       }),
       colors: {
         bbc: {
@@ -38,9 +39,12 @@ module.exports = {
           orange: '#FF4900',
           green: '#90D200',
           yellowAlt: '#FFE513',
+          darkGray: '#282828',
+          footerBorder: '#717171',
         },
       },
       spacing: {
+        '11px': '0.688rem',
         3.5: '0.875rem',
         7: '1.75rem',
         '15p': '0.938rem',
