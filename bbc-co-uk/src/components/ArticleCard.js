@@ -10,13 +10,14 @@ export default function ArticleCard({
   isMain,
   isVideo,
   isLarge,
+  isIplayer,
 }) {
   return (
     <div className="bg-white h-full">
       <a
         href="!#"
-        className={`group flex ${
-          isMain ? 'h-full flex-col' : 'flex-row md:flex-col'
+        className={`group flex md:h-full ${
+          isMain ? 'flex-col' : 'flex-row md:flex-col'
         }`}
       >
         <div className="relative">
@@ -38,6 +39,19 @@ export default function ArticleCard({
               >
                 <title>play</title>
                 <path d="M3 32l26-16L3 0v32z"></path>
+              </svg>
+            </span>
+          ) : null}
+          {isIplayer ? (
+            <span className="absolute bottom-0 bg-white p-3">
+              <svg
+                viewBox="0 0 32 32"
+                className="w-6 text-bbc-shipGray"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <title>iplayer</title>
+                <path d="M11 0H3v8h8V4.7L24 16 11 27.3V12H3v20h8l18-16L11 0z"></path>
               </svg>
             </span>
           ) : null}

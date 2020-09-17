@@ -1,4 +1,5 @@
 import ArticleCard from './components/ArticleCard';
+import Footer from './components/Footer';
 import Nav from './components/Nav';
 import React from 'react';
 import SiteTitle from './components/SiteTitle';
@@ -79,6 +80,28 @@ function App() {
           </div>
         </div>
       </section>
+      <section className="bg-bbc-darkGray md:bg-iplayer bg-cover">
+        <div className="container mx-auto px-2 md:px-4">
+          <h2 className="text-white font-bold py-5 text-xl md:text-28">
+            Best of BBC iPlayer
+          </h2>
+        </div>
+        <div className="container mx-auto px-2 md:px-4 pb-8 grid grid-rows-3 md:grid-cols-4 md:grid-rows-none gap-15p">
+          <div className="col-span-1">
+            <ArticleCard {...articles[9]} isIplayer />
+          </div>
+          <div className="col-span-1">
+            <ArticleCard {...articles[10]} isIplayer />
+          </div>
+          <div className="col-span-1">
+            <ArticleCard {...articles[11]} isIplayer />
+          </div>
+          <div className="col-span-1">
+            <ArticleCard {...articles[12]} isIplayer />
+          </div>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 }

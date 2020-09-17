@@ -149,4 +149,22 @@
         font-weight: 500;
     }
 
+    .footer-links li {
+        position: relative;
+    }
+
+    .footer-links li:before {
+        content: '';
+        width: 1px;
+        height: 100%;
+        background: #717171;
+        display: block;
+        position: absolute;
+        left: -20px; 
+    }
+
+    .footer-links li:first-child:before,
+    .footer-links li:nth-child(2):before {
+        display: none;
+    }
 }
