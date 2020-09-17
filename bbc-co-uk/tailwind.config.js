@@ -16,6 +16,11 @@ module.exports = {
       backgroundImage: (theme) => ({
         'top-stories':
           "url('https://ichef.bbci.co.uk/images/ic/1600xn/p08220hq.jpg')",
+        'current-topic':
+          "url('https://ichef.bbci.co.uk/images/ic/1600xn/p085kfb2.jpg')",
+        food: "url('https://ichef.bbci.co.uk/images/ic/1600xn/p08bm7vf.jpg')",
+        sport: "url('https://ichef.bbci.co.uk/images/ic/1600xn/p0824wlf.jpg')",
+        tws: "url('https://ichef.bbci.co.uk/images/ic/1600xn/p086rj9w.jpg')",
       }),
       colors: {
         bbc: {
@@ -36,6 +41,7 @@ module.exports = {
         },
       },
       spacing: {
+        3.5: '0.875rem',
         7: '1.75rem',
         '15p': '0.938rem',
         25: '6.25rem',
@@ -52,10 +58,14 @@ module.exports = {
         32: '2rem',
       },
       inset: {
+        '2px': '2px',
         '3px': '3px',
       },
       lineHeight: {
         22: '1.375rem',
+      },
+      gridTemplateRows: {
+        auto: 'auto',
       },
     },
     screens: {

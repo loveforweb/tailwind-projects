@@ -7,12 +7,19 @@ export default function ArticleCard({
   category,
   isLive,
   imgAlt,
-  main,
+  isMain,
+  isVideo,
+  isLarge,
 }) {
   return (
     <div className="bg-white h-full">
-      <a href="!#" className="group flex flex-col h-full">
-        <div>
+      <a
+        href="!#"
+        className={`group flex ${
+          isMain ? 'h-full flex-col' : 'flex-row md:flex-col'
+        }`}
+      >
+        <div className="relative">
           <img
             alt={imgAlt}
             srcSet={imgSrcSet}
@@ -21,17 +28,32 @@ export default function ArticleCard({
             height="135"
             className="w-full"
           />
+          {isVideo ? (
+            <span className="absolute bottom-0 bg-white p-3">
+              <svg
+                viewBox="0 0 32 32"
+                className="w-6 text-bbc-shipGray"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <title>play</title>
+                <path d="M3 32l26-16L3 0v32z"></path>
+              </svg>
+            </span>
+          ) : null}
         </div>
 
         <div
           className={`${
-            main ? 'py-3' : ' py-4'
-          } flex flex-col px-4 h-full justify-between`}
+            isLarge ? 'py-3 px-4' : 'px-2 py-2 md:px-4 md:py-4'
+          } flex flex-col h-full justify-between`}
         >
           <div className="flex flex-row">
             <h3
               className={`${
-                main ? `text-28 leading-8` : `text-lg leading-5`
+                isLarge
+                  ? `text-2xl leading-7 md:text-28 md:leading-8`
+                  : `text-base md:text-lg leading-5`
               } font-bold text-bbc-shipGray`}
             >
               {isLive ? (
@@ -61,7 +83,9 @@ export default function ArticleCard({
               </span>
             </h3>
           </div>
-          <span className="flex mt-4 text-13 text-bbc-dimGray">{category}</span>
+          <span className="flex mt-1 md:mt-4 text-13 text-bbc-dimGray">
+            {category}
+          </span>
         </div>
       </a>
     </div>

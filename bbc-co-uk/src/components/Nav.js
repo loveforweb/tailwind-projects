@@ -20,7 +20,7 @@ export default function Nav() {
             <span className="sr-only">BBC Homepage</span>
           </a>
         </div>
-        <ul className="flex flex-row flex-auto items-center text-bbc-shipGray font-bold text-13">
+        <ul className="hidden md:flex flex-row flex-auto items-center text-bbc-shipGray font-bold text-13">
           <li className="w-44 border-r border-r-bbc-gray flex h-full">
             <a
               href="!#"
